@@ -6,9 +6,9 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className="App">
-      <Header title="What's That Movie?"></Header>
+      <Header></Header>
       <Info></Info>
-      <Footer title="2021"></Footer>
+      <Footer></Footer>
     </div>
   );
 }

@@ -1,4 +1,21 @@
 .info {
-  width: 80%;
+  width: 60%;
   margin: auto;
+  flex: 1 0 auto;
+}
+
+form {
+  padding: 20px 0;
+  background-color: white;
+}
+
+form * {
+  font-size: 16px;
+  padding: 10px 0;
+  margin: 5px;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+#search {
+  padding: 10px;
 }

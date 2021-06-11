@@ -4,7 +4,7 @@ import './Header.css';
 function Header(props) {
   return (
     <div className="header">
-      {props.title}
+      <h1>What's That Movie?</h1>
     </div>
   );
 }
