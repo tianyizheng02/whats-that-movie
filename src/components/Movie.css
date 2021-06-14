@@ -10,7 +10,7 @@
   border-style: none;
 }
 
-img {
+.cardImage {
   max-width: 100px;
   vertical-align: middle;
 }
@@ -22,4 +22,43 @@ img {
 .description {
   flex: 80%;
   margin: 0 5%;
+}
+
+.title {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.moreInfo {
+  font-family: 'Montserrat', Arial, monospace;
+  padding: 10px;
+}
+
+/* Prevents scrolling of body when modal dialog is open */
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  overflow: auto;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.modalInfo {
+  text-align: center;
 }

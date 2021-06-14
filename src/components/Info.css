@@ -1,7 +1,8 @@
 .info {
-  width: 60%;
+  width: 50%;
   margin: auto;
   flex: 1 0 auto;
+  padding-bottom: 20px;
 }
 
 form {

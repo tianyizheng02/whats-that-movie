@@ -10,19 +10,18 @@ function Info() {
 
   function submit(e) {
     e.preventDefault();
-    async function fetchMyAPI() {
+
+    async function fetchMovies() {
       const title = encodeURIComponent(query);
       const apiUrl = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${title}&type=movie&page=${page}&r=json`;
-      console.log(apiUrl);
       let response = await fetch(apiUrl);
       response = await response.json();
-      console.log(response);
+      setMovies(response.Search !== undefined ? response.Search : []);
       console.log(response.Search);
-      setMovies(response.Search);
     }
-    fetchMyAPI();
+
+    fetchMovies();
     setShowMovies(true);
-    setQuery("");
   }
 
   function displayMovies() {
