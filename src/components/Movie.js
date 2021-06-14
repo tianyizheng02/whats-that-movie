@@ -45,6 +45,7 @@ function Movie(props) {
             <div className="description">
               <Card.Body className="descriptionText">
                 <Card.Title className="title">{movie.Title} ({movie.Year})</Card.Title>
+
                 <button className="moreInfo" onClick={() => open(movie.imdbID)}>More info</button>
                 <Modal className="modal" overlayClassName="modalOverlay" isOpen={modalOpen} onRequestClose={() => setModalOpen(!modalOpen)}>
                   {showInfo()}

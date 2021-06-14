@@ -5,31 +5,26 @@ import Movie from './Movie';
 function Info() {
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState("");
+  const [results, setResults] = useState(0);
   const [page, setPage] = useState(1);
   const [showMovies, setShowMovies] = useState(false);
 
-  function submit(e) {
-    e.preventDefault();
+  async function fetchMovies(pageNum) {
+    setPage(pageNum);
+    const title = encodeURIComponent(query);
+    const apiUrl = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${title}&type=movie&page=${pageNum}&r=json`;
 
-    async function fetchMovies() {
-      const title = encodeURIComponent(query);
-      const apiUrl = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${title}&type=movie&page=${page}&r=json`;
-      let response = await fetch(apiUrl);
-      response = await response.json();
-      setMovies(response.Search !== undefined ? response.Search : []);
-      console.log(response.Search);
-    }
+    let response = await fetch(apiUrl);
+    response = await response.json();
 
-    fetchMovies();
-    setShowMovies(true);
+    setResults(response.totalResults !== undefined ? response.totalResults : 0);
+    setMovies(response.Search !== undefined ? response.Search : []);
+    setShowMovies(response.totalResults !== undefined ? true : false);
   }
 
-  function displayMovies() {
-    if (showMovies) {
-      return (
-        <Movie movies={movies}></Movie>
-      );
-    }
+  function submit(e) {
+    e.preventDefault();
+    fetchMovies(1);
   }
 
   return (
@@ -40,7 +35,14 @@ function Info() {
           onChange={e => setQuery(e.target.value)}/>
         <button id="search">Search</button>
       </form>
-      {displayMovies()}
+
+      {showMovies ? <button className="nav" disabled={page === 1} onClick={() => fetchMovies(page - 1)}>Previous Page</button> : <></>}
+      {showMovies ? <button className="nav" disabled={page * 10 > results} onClick={() => fetchMovies(page + 1)}>Next Page</button> : <></>}
+
+      {showMovies ? <Movie movies={movies}></Movie> : <></>}
+
+      {showMovies ? <button className="nav" disabled={page === 1} onClick={() => fetchMovies(page - 1)}>Previous Page</button> : <></>}
+      {showMovies ? <button className="nav" disabled={page * 10 > results} onClick={() => fetchMovies(page + 1)}>Next Page</button> : <></>}
     </div>
   );
 }
