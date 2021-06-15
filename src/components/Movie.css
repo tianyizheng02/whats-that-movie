@@ -34,7 +34,6 @@
   padding: 10px;
 }
 
-/* Prevents scrolling of body when modal dialog is open */
 .ReactModal__Body--open {
   overflow: hidden;
 }
@@ -52,11 +51,13 @@
 
 .modalOverlay {
   position: fixed;
+  height: 100%;
+  width: 100%;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .modalInfo {

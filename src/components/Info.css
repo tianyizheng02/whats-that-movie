@@ -1,28 +1,43 @@
 .info {
-  width: 50%;
+  width: 100%;
   margin: auto;
   flex: 1 0 auto;
   padding-bottom: 20px;
-}
-
-form {
-  padding: 20px 0;
-  background-color: white;
 }
 
 form * {
   font-size: 16px;
   padding: 10px;
   margin: 5px;
+  border-radius: 5px;
+  border-width: thin;
   font-family: 'Montserrat', Arial, sans-serif;
 }
 
+#input {
+  border-color: black;
+}
+
 #search {
-  padding: 10px;
+  padding: 11px;
+  color: white;
+  background-color: green;
+  border-style: none;
 }
 
 .nav {
   font-family: 'Montserrat', Arial, sans-serif;
   padding: 10px;
-  margin: 0 10px;
+  margin: 10px 10px 0 10px;
+}
+
+#searchHeader {
+  padding: 20px 0;
+  width: 100%;
+  background-color: #eee;
+}
+
+.card {
+  width: 50%;
+  margin: auto;
 }

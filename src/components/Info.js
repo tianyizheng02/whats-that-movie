@@ -29,20 +29,19 @@ function Info() {
 
   return (
     <div className="info">
-      <form onSubmit={submit}>
-        <label id="description" htmlFor="queryInput">Movie Name:</label>
-        <input id="input" value={query} type="text"
-          onChange={e => setQuery(e.target.value)}/>
-        <button id="search">Search</button>
-      </form>
+      <div id="searchHeader">
+        <form onSubmit={submit}>
+          <label id="description" htmlFor="queryInput">Movie Name:</label>
+          <input id="input" value={query} type="text"
+            onChange={e => setQuery(e.target.value)}/>
+          <button id="search">Search</button>
+        </form>
 
-      {showMovies ? <button className="nav" disabled={page === 1} onClick={() => fetchMovies(page - 1)}>Previous Page</button> : <></>}
-      {showMovies ? <button className="nav" disabled={page * 10 > results} onClick={() => fetchMovies(page + 1)}>Next Page</button> : <></>}
+        {showMovies ? <button className="nav" disabled={page === 1} onClick={() => fetchMovies(page - 1)}>Previous Page</button> : <></>}
+        {showMovies ? <button className="nav" disabled={page * 10 >= results} onClick={() => fetchMovies(page + 1)}>Next Page</button> : <></>}
+      </div>
 
-      {showMovies ? <Movie movies={movies}></Movie> : <></>}
-
-      {showMovies ? <button className="nav" disabled={page === 1} onClick={() => fetchMovies(page - 1)}>Previous Page</button> : <></>}
-      {showMovies ? <button className="nav" disabled={page * 10 > results} onClick={() => fetchMovies(page + 1)}>Next Page</button> : <></>}
+      {showMovies ? <Movie class="searchResult" movies={movies}></Movie> : <></>}
     </div>
   );
 }
