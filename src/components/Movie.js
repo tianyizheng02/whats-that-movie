@@ -57,6 +57,41 @@ function Movie(props) {
     return `${mins} min`;
   }
 
+  function formatMetascore(metascore) {
+    let score = parseInt(metascore);
+    if (metascore === 'N/A' || metascore === undefined || score === NaN) {
+      return metascore;
+    }
+
+    if (score > 80) {
+      return (
+        <span className="score great">{score}/100</span>
+      );
+    }
+
+    if (score > 60) {
+      return (
+        <span className="score good">{score}/100</span>
+      );
+    }
+
+    if (score >= 40) {
+      return (
+        <span className="score ok">{score}/100</span>
+      );
+    }
+
+    if (score > 20) {
+      return (
+        <span className="score bad">{score}/100</span>
+      );
+    }
+
+    return (
+      <span className="score awful">{score}/100</span>
+    );
+  }
+
   return (
     <div>
       {props.movies.map(movie => {
@@ -78,6 +113,7 @@ function Movie(props) {
                     <p>Runtime: {formatTime(selection.Runtime)}</p>
                     <p>Genre(s): {selection.Genre}</p>
                     <p>Director(s): {selection.Director}</p>
+                    <p>Rating: {formatMetascore(selection.Metascore)}</p>
                     <br></br>
                     <p>{selection.Plot !== 'N/A' ? selection.Plot : 'No plot synopsis available.'}</p>
                   </div>

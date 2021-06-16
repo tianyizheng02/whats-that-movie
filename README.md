@@ -11,6 +11,7 @@ The web app provides the following info for each movie (if available):
 - Runtime
 - Genre(s)
 - Director(s)
+- Rating (Metascore)
 - Short plot synopsis
 
 ## Credits

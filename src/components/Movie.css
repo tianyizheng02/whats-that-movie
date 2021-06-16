@@ -63,3 +63,27 @@
 .modalInfo {
   text-align: center;
 }
+
+.score {
+  font-weight: bold;
+}
+
+.great {
+  color: green;
+}
+
+.good {
+  color: limegreen;
+}
+
+.ok {
+  color: gold;
+}
+
+.bad {
+  color: orange;
+}
+
+.awful {
+  color: red;
+}
