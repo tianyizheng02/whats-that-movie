@@ -1,6 +1,6 @@
 # What's That Movie?
 
-[What's that Movie](https://tianyizheng02.github.io/whats-that-movie/) is a basic web app that I created that retrieves info on movies using the [OMDb API](https://www.omdbapi.com/).
+[What's That Movie](https://tianyizheng02.github.io/whats-that-movie/) is a basic web app that I created that retrieves info on movies using the [OMDb API](https://www.omdbapi.com/).
 
 ## Features
 
