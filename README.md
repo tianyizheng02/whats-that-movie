@@ -6,6 +6,7 @@
 
 The web app provides the following info for each movie (if available):
 - Title and Year
+- Poster
 - Release Date
 - Runtime
 - Genre(s)
