@@ -12,3 +12,7 @@ The web app provides the following info for each movie (if available):
 - Genre(s)
 - Director(s)
 - Short plot synopsis
+
+## Credits
+
+This web app was built on Kristen Koyanagi's [starter code](https://github.com/kristenkoyanagi/react-with-omdb) for Capital One's Software Engineering Summit coding challenge.
