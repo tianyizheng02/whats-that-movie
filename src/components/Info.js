@@ -17,6 +17,7 @@ function Info() {
     let response = await fetch(apiUrl);
     response = await response.json();
 
+    // Ensure that state variables are never undefined
     setResults(response.totalResults !== undefined ? response.totalResults : 0);
     setMovies(response.Search !== undefined ? response.Search : []);
     setShowMovies(response.totalResults !== undefined ? true : false);

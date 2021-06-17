@@ -34,6 +34,7 @@
   padding: 10px;
 }
 
+/* Prevent scrolling when modal dialogue is open */
 .ReactModal__Body--open {
   overflow: hidden;
 }

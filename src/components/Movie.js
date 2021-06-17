@@ -29,6 +29,7 @@ function Movie(props) {
       return title;
     }
 
+    // Format movie title as "Title (Year)"
     return `${title} (${year})`;
   }
 
@@ -37,6 +38,7 @@ function Movie(props) {
       return dateString;
     }
 
+    // Format date in the American style (Month Day, Year)
     let d = new Date(dateString);
     return `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
   }
@@ -46,6 +48,7 @@ function Movie(props) {
       return timeString;
     }
 
+    // Separate time into hours and minutes
     let time = timeString.match(/(\d+) min/)[1];
     let hours = Math.floor(time / 60);
     let mins = time % 60;
@@ -59,36 +62,26 @@ function Movie(props) {
 
   function formatMetascore(metascore) {
     let score = parseInt(metascore);
-    if (metascore === 'N/A' || metascore === undefined || score === NaN) {
+    if (metascore === 'N/A' || metascore === undefined || isNaN(score)) {
       return metascore;
     }
 
+    // Value of score determines CSS class, which determines displayed color
+    let scoreClass = '';
     if (score > 80) {
-      return (
-        <span className="score great">{score}/100</span>
-      );
-    }
-
-    if (score > 60) {
-      return (
-        <span className="score good">{score}/100</span>
-      );
-    }
-
-    if (score >= 40) {
-      return (
-        <span className="score ok">{score}/100</span>
-      );
-    }
-
-    if (score > 20) {
-      return (
-        <span className="score bad">{score}/100</span>
-      );
+      scoreClass = 'score great';
+    } else if (score > 60) {
+      scoreClass = 'score good';
+    } else if (score > 40) {
+      scoreClass = 'score ok';
+    } else if (score > 20) {
+      scoreClass = 'score bad';
+    } else {
+      scoreClass = 'score awful';
     }
 
     return (
-      <span className="score awful">{score}/100</span>
+      <span className={scoreClass}>{score}/100</span>
     );
   }
 
@@ -106,7 +99,6 @@ function Movie(props) {
                 <button className="moreInfo" onClick={() => open(movie.imdbID)}>More info</button>
 
                 <Modal className="modal" overlayClassName="modalOverlay" isOpen={modalOpen} onRequestClose={() => setModalOpen(!modalOpen)}>
-
                   <div className="modalInfo">
                     <h2>{formatTitle(selection.Title, selection.Year)}</h2>
                     <p>Release Date: {formatDate(selection.Released)}</p>
