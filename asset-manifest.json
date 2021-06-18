@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/whats-that-movie/static/css/main.a1d5c3e5.chunk.css",
+    "main.css": "/whats-that-movie/static/css/main.f73dd105.chunk.css",
     "main.js": "/whats-that-movie/static/js/main.71e446f0.chunk.js",
     "main.js.map": "/whats-that-movie/static/js/main.71e446f0.chunk.js.map",
     "runtime-main.js": "/whats-that-movie/static/js/runtime-main.678c350b.js",
@@ -8,14 +8,14 @@
     "static/js/2.95a288e5.chunk.js": "/whats-that-movie/static/js/2.95a288e5.chunk.js",
     "static/js/2.95a288e5.chunk.js.map": "/whats-that-movie/static/js/2.95a288e5.chunk.js.map",
     "index.html": "/whats-that-movie/index.html",
-    "static/css/main.a1d5c3e5.chunk.css.map": "/whats-that-movie/static/css/main.a1d5c3e5.chunk.css.map",
+    "static/css/main.f73dd105.chunk.css.map": "/whats-that-movie/static/css/main.f73dd105.chunk.css.map",
     "static/js/2.95a288e5.chunk.js.LICENSE.txt": "/whats-that-movie/static/js/2.95a288e5.chunk.js.LICENSE.txt",
     "static/media/no-poster.30c202b1.png": "/whats-that-movie/static/media/no-poster.30c202b1.png"
   },
   "entrypoints": [
     "static/js/runtime-main.678c350b.js",
     "static/js/2.95a288e5.chunk.js",
-    "static/css/main.a1d5c3e5.chunk.css",
+    "static/css/main.f73dd105.chunk.css",
     "static/js/main.71e446f0.chunk.js"
   ]
 }
