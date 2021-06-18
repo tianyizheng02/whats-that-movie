@@ -16,25 +16,42 @@ form * {
 
 #input {
   border-color: black;
+  border-style: solid;
 }
 
 #search {
-  padding: 11px;
+  padding: 10px;
   color: white;
   background-color: green;
-  border-style: none;
+  border-style: solid;
+  border-color: darkgreen;
 }
 
 .nav {
   font-family: 'Montserrat', Arial, sans-serif;
   padding: 10px;
   margin: 10px 10px 0 10px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: thin;
+}
+
+.nav:enabled {
+  background-color: white;
+}
+
+.nav:disabled {
+  background-color: #eee;
+}
+
+.nav:active {
+  color: black;
 }
 
 #searchHeader {
   padding: 20px 0;
   width: 100%;
-  background-color: #eee;
+  background-color: #e7e7e7;
 }
 
 .card {

@@ -30,8 +30,16 @@
 }
 
 .moreInfo {
+  background-color: #e7e7e7;
   font-family: 'Montserrat', Arial, monospace;
   padding: 10px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: thin;
+}
+
+.moreInfo:active {
+  color: black;
 }
 
 /* Prevent scrolling when modal dialogue is open */
