@@ -97,6 +97,10 @@ form * {
     color: var(--text-color-dark);
   }
 
+  #input:focus {
+    border-color: var(--text-color-dark);
+  }
+
   #search {
     color: var(--text-color-dark);
     background-color: rgba(0, 100, 0, 0.8);
