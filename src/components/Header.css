@@ -1,12 +1,16 @@
 .header {
   background-color: #013D5B;
   min-height: 100px;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: white;
 }
 
-h1 {
-  margin: 0 10%;
+
+#icon {
+  width: 60px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
