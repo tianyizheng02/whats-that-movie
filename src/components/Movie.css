@@ -10,7 +10,7 @@
   border-style: none;
 }
 
-.cardImage {
+.card-image {
   max-width: 100px;
   vertical-align: middle;
 }
@@ -29,17 +29,19 @@
   padding: 10px;
 }
 
-.moreInfo {
-  background-color: #e7e7e7;
+.more-info {
+  background-color: var(--search-color-light);
   font-family: 'Montserrat', Arial, monospace;
   padding: 10px;
   border-radius: 5px;
   border-style: solid;
   border-width: thin;
+  border-color: var(--border-color-light);
+  cursor: pointer;
 }
 
-.moreInfo:active {
-  color: black;
+.more-info:active {
+  border-color: var(--text-color-light);
 }
 
 /* Prevent scrolling when modal dialogue is open */
@@ -52,13 +54,13 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: white;
+  background-color: var(--bg-color-light);
   overflow: auto;
   border-radius: 10px;
   padding: 20px;
 }
 
-.modalOverlay {
+.modal-overlay {
   position: fixed;
   height: 100%;
   width: 100%;
@@ -69,7 +71,7 @@
   background: rgba(0, 0, 0, 0.1);
 }
 
-.modalInfo {
+.modal-info {
   text-align: center;
 }
 
@@ -95,4 +97,35 @@
 
 .awful {
   color: red;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .card {
+    border-color: var(--border-color-dark);
+  }
+
+  .title {
+    color: var(--text-color-dark);
+  }
+
+  .more-info {
+    background-color: var(--accent-color-dark);
+    border-color: var(--border-color-dark);
+    color: var(--text-color-dark);
+  }
+
+  .more-info:active {
+    border-color: var(--text-color-dark);
+  }
+
+  .modal {
+    background-color: var(--bg-color-dark);
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--border-color-dark);
+  }
+
+  .modal-info {
+    color: var(--text-color-dark);
+  }
 }

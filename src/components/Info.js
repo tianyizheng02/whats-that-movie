@@ -30,7 +30,7 @@ function Info() {
 
   return (
     <div className="info">
-      <div id="searchHeader">
+      <div id="search-header">
         <form onSubmit={submit}>
           <label id="description" htmlFor="queryInput">Movie Name:</label>
           <input id="input" value={query} type="text"

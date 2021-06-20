@@ -90,16 +90,16 @@ function Movie(props) {
       {props.movies.map(movie => {
         return (
           <Card className="card" key={movie.imdbID}>
-            <Card.Img className="cardImage" src={movie.Poster !== 'N/A' ? movie.Poster : NoPoster}/>
+            <Card.Img className="card-image" src={movie.Poster !== 'N/A' ? movie.Poster : NoPoster}/>
 
           <div className="description">
-              <Card.Body className="descriptionText">
+              <Card.Body className="description-text">
                 <Card.Title className="title">{formatTitle(movie.Title, movie.Year)}</Card.Title>
 
-                <button className="moreInfo" onClick={() => open(movie.imdbID)}>More info</button>
+                <button className="more-info" onClick={() => open(movie.imdbID)}>More info</button>
 
-                <Modal className="modal" overlayClassName="modalOverlay" isOpen={modalOpen} onRequestClose={() => setModalOpen(!modalOpen)}>
-                  <div className="modalInfo">
+                <Modal className="modal" overlayClassName="modal-overlay" isOpen={modalOpen} onRequestClose={() => setModalOpen(!modalOpen)}>
+                  <div className="modal-info">
                     <h2>{formatTitle(selection.Title, selection.Year)}</h2>
                     <p>Release Date: {formatDate(selection.Released)}</p>
                     <p>Runtime: {formatTime(selection.Runtime)}</p>
