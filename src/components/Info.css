@@ -3,6 +3,7 @@
   margin: auto;
   flex: 1 0 auto;
   padding-bottom: 20px;
+  background-color: white;
 }
 
 form * {
@@ -10,21 +11,40 @@ form * {
   padding: 10px;
   margin: 5px;
   border-radius: 5px;
-  border-width: thin;
+  border-width: 1px;
   font-family: 'Montserrat', Arial, sans-serif;
 }
 
-#input {
-  border-color: black;
+#search-header {
+  padding: 20px 0;
+  width: 100%;
+  background-color: var(--search-color-light);
   border-style: solid;
+  border-width: 0 0 1px 0;
+  border-color: var(--border-color-light);
+}
+
+#input {
+  border-style: solid;
+  border-color: var(--border-color-light);
+}
+
+#input:focus {
+  outline-style: none;
+  border-color: var(--text-color-light);
 }
 
 #search {
   padding: 10px;
-  color: white;
+  color: var(--bg-color-light);
   background-color: green;
   border-style: solid;
   border-color: darkgreen;
+  cursor: pointer;
+}
+
+#search:active {
+  border-color: limegreen;
 }
 
 .nav {
@@ -33,28 +53,74 @@ form * {
   margin: 10px 10px 0 10px;
   border-radius: 5px;
   border-style: solid;
-  border-width: thin;
+  border-width: 1px;
+  border-color: var(--border-color-light);
+}
+
+.nav:active {
+  border-color: var(--text-color-light);
 }
 
 .nav:enabled {
-  background-color: white;
+  background-color: var(--bg-color-light);
+  cursor: pointer;
 }
 
 .nav:disabled {
-  background-color: #eee;
+  background-color: var(--search-color-light);
 }
 
 .nav:active {
   color: black;
 }
 
-#searchHeader {
-  padding: 20px 0;
-  width: 100%;
-  background-color: #e7e7e7;
-}
-
 .card {
   width: 50%;
   margin: auto;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .info {
+    background-color: var(--bg-color-dark);
+  }
+
+  #search-header {
+    background-color: var(--bg-color-dark);
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: var(--border-color-dark);
+  }
+
+  #input {
+    background-color: var(--accent-color-dark);
+    border-color: var(--border-color-dark);
+    color: var(--text-color-dark);
+  }
+
+  #search {
+    color: var(--text-color-dark);
+    background-color: rgba(0, 100, 0, 0.8);
+  }
+
+  #description {
+    color: var(--text-color-dark);
+  }
+
+  .nav {
+    border-color: var(--border-color-dark);
+  }
+
+  .nav:active {
+    border-color: var(--text-color-dark);
+  }
+
+  .nav:enabled {
+    background-color: var(--accent-color-dark);
+    color: var(--text-color-dark);
+  }
+
+  .nav:disabled {
+    background-color: var(--bg-color-dark);
+    color: var(--border-color-dark);
+  }
 }
