@@ -42,4 +42,6 @@ REACT_APP_API_KEY={YOUR API KEY HERE}
 
 ## Credits
 
-This web app was built on Kristen Koyanagi's [starter code](https://github.com/kristenkoyanagi/react-with-omdb) for Capital One's Software Engineering Summit coding challenge.
+This web app was built on [Kristen Koyanagi's starter code](https://github.com/kristenkoyanagi/react-with-omdb) for Capital One's Software Engineering Summit coding challenge.
+
+The icon design is based on the movie icon from [Tabler Icons](https://github.com/tabler/tabler-icons).
